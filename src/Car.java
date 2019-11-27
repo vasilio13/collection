@@ -48,4 +48,17 @@ public class Car implements Comparable<Car>{
         return this.getPrice() - car.getPrice();
     }
 
+    @Override
+    public String toString() {
+        return model;
+
+                /*"Car{" +
+                "model='" + model + '\'' +
+                ", price=" + price +
+                ", power=" + power +
+                ", topSpeed=" + topSpeed +
+                '}';
+
+                 */
+    }
 }

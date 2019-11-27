@@ -10,6 +10,15 @@ public class CarApp {
 
         TreeSet<Car> cars = new TreeSet<>();
 
+        cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        cars.add(car4);
+        cars.add(car5);
+
+        System.out.println(cars);
+
+
 
 
 
