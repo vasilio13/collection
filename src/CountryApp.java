@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class CountryApp {
     public static void main (String [] args){
@@ -22,9 +23,9 @@ public class CountryApp {
 
         System.out.println();
 
-        for (Map.Entry entry: countries.entrySet()) {
+        for (Map.Entry<String, String> entry: countries.entrySet()) {
 
-            if (Integer.parseInt((entry.getValue()).toString()) > Integer.parseInt("9475000")) {
+            if (Integer.parseInt(entry.getValue()) > Integer.parseInt("9475000")) {
                 System.out.println(entry);// out records >5 mln
             }
         }
