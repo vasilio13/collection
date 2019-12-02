@@ -1,15 +1,16 @@
 import java.util.ArrayList;
-import java.util.List;
+        import java.util.List;
 
 public class Employee extends Man {
+
     private String position;
     private IdCard card;
     private List<Room> rooms = new ArrayList<>();
     private Department department;
-    private List<PastPosition> pastPosition = new ArrayList<>();
+    private List<PastPosition> pastPositions = new ArrayList<>();
 
     public Employee(String name, String surname, String position) {
-        super (name,surname);
+        super(name, surname);
         this.position = position;
     }
 
@@ -37,6 +38,10 @@ public class Employee extends Man {
         this.department = department;
     }
 
+    public List<Room> getRooms(){
+        return rooms;
+    }
+
     public void setRoom(Room room){
         rooms.add(room);
     }
@@ -45,20 +50,16 @@ public class Employee extends Man {
         rooms.remove(room);
     }
 
-    public List<Room> getRooms(){
-        return rooms;
+    public List<PastPosition> getPastPositions(){
+        return pastPositions;
     }
 
-    public void setPastPositions(PastPosition position){
-       pastPosition.add(position);
+    public void setPastPosition(PastPosition pastPosition){
+        pastPositions.add(pastPosition);
     }
 
-    public void removePositions(PastPosition position){
-        pastPosition.remove(position);
-    }
-
-    public List<PastPosition> getPositions() {
-        return pastPosition;
+    public void removePastPosition(PastPosition pastPosition){
+        pastPositions.remove(pastPosition);
     }
 
     @Override
@@ -68,7 +69,7 @@ public class Employee extends Man {
                 ", card=" + card +
                 ", rooms=" + rooms +
                 ", department=" + department +
-                ", pastPosition=" + pastPosition +
+                ", pastPositions=" + pastPositions +
                 '}';
     }
 }

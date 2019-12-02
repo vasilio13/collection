@@ -1,6 +1,6 @@
-public class Man {
-    String name;
-    String surname;
+public abstract class Man {
+    private String name;
+    private String surname;
 
     public Man(String name, String surname) {
         this.name = name;

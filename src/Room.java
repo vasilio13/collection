@@ -1,5 +1,8 @@
+import java.util.Objects;
+
 public class Room {
-    int number;
+
+    private int number;
 
     public Room(int number) {
         this.number = number;
@@ -11,6 +14,19 @@ public class Room {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Room room = (Room) o;
+        return number == room.number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
     }
 
     @Override

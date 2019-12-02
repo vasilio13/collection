@@ -1,4 +1,5 @@
 public class PastPosition {
+
     private String name;
     private Department department;
 
@@ -23,9 +24,6 @@ public class PastPosition {
         this.department = department;
     }
 
-
-
-
     @Override
     public String toString() {
         return "PastPosition{" +
@@ -33,4 +31,5 @@ public class PastPosition {
                 ", department=" + department +
                 '}';
     }
+
 }
